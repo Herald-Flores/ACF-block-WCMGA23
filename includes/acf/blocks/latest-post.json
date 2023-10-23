@@ -1,0 +1,19 @@
+{
+  "name": "latest-post",
+  "title": "Latest Post Cards",
+  "description": "A custom latest post card block.",
+  "icon": "excerpt-view",
+  "category": "blockssliders",
+  "keywords": ["custom", "theme", "post"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "file:./template/latest-post/index.php"
+  },
+  "example": {
+    "attributes": {
+      "data": {
+        "title": "This is an example text field"
+      }
+    }
+  }
+}

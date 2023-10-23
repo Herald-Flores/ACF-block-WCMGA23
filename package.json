@@ -1,0 +1,30 @@
+{
+  "name": "acf-block-wcmga23",
+  "version": "1.0.0",
+  "description": "Custom Guttembergs ACF Blocks examples for WCMGA23",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel sync export-js tailwindwatch",
+    "sync": "browser-sync start --proxy wcmga23.local --files '**/*.php' 'dist/*.js' 'dist/*.css'",
+    "build": "npm-run-all --sequential build-js tailwindbuild",
+    "start": "npm-run-all --parallel export-js tailwindwatch",
+    "export-js": "babel public/js -d dist/js",
+    "minify-js": "uglifyjs dist/js/index.js -o dist/js/main.min.js",
+    "build-js": "npm-run-all export-js minify-js",
+    "tailwindbuild": "tailwindcss -i ./public/css/main.css -o ./dist/index.css --postcss --minify",
+    "tailwindwatch": "tailwindcss -i ./public/css/main.css -o ./dist/index.css --watch --postcss --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "10.4.16",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "2.29.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "8.4.31",
+    "tailwindcss": "3.3.3",
+    "uglify-js": "^3.17.4"
+  }
+}
