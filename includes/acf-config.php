@@ -55,11 +55,10 @@ function register_acf_block_types() {
     include_once $block_file;
   }
 
-  $block_json_files = glob( __DIR__ . '/acf/blocks/*.json' ); // Get all block json files
+  $block_json_files = glob( __DIR__ . '/acf/blocks/**/block.json' ); // Get all block json files
   foreach ( $block_json_files as $block_json_file ) {
-    $block_data = json_decode( file_get_contents( $block_json_file ), true );
-    acf_register_block_type( $block_data );
-  }
+    register_block_type( $block_json_file );
+  };
 
 }
 add_action( 'acf/init', 'register_acf_block_types' );

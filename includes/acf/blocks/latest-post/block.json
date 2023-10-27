@@ -4,10 +4,11 @@
   "description": "A custom latest post card block.",
   "icon": "excerpt-view",
   "category": "blockssliders",
+  "style": [],
   "keywords": ["custom", "theme", "post"],
   "acf": {
     "mode": "preview",
-    "renderTemplate": "file:./template/latest-post/index.php"
+    "renderTemplate": "index.php"
   },
   "example": {
     "attributes": {

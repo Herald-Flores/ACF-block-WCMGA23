@@ -1,0 +1,13 @@
+{
+  "name": "testimonials",
+  "title": "Testimonials",
+  "description": "A custom testimonials block.",
+  "icon": "admin-comments",
+  "category": "blockssliders",
+  "style": [],
+  "keywords": ["custom", "theme", "testimonials"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "index.php"
+  }
+}
