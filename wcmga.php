@@ -75,6 +75,8 @@ class WCMGAClass {
     add_action('admin_notices', array($this, 'my_plugin_acf_notice'));
     add_action('admin_enqueue_scripts', array($this, 'load_admin_css'));
     add_action('wp_enqueue_scripts', array($this, 'wcmga_enqueue_scripts'));
+
+    add_theme_support( 'align-wide' );
   }
 
   function wcmga_enqueue_scripts() {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel sync export-js tailwindwatch",
-    "sync": "browser-sync start --proxy wcmga23.local --files '**/*.php' 'dist/*.js' 'dist/*.css'",
+    "sync": "browser-sync start --proxy wcmga2023.local --files '**/*.php' 'dist/*.js' 'dist/*.css'",
     "build": "npm-run-all --sequential build-js tailwindbuild",
     "start": "npm-run-all --parallel export-js tailwindwatch",
     "export-js": "babel public/js -d dist/js",
